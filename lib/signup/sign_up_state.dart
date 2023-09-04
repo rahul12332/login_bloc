@@ -1,18 +1,25 @@
 part of 'sign_up_bloc.dart';
-enum Status {
-  initial, loading, success, failed
-}
-abstract class SignUpState extends Equatable {
+
+ class SignUpState extends Equatable {
   const SignUpState();
+  @override
+  // TODO: implement props
+  List<Object?> get props => [];
+
 }
 
-class SignUpInitial extends SignUpState {
-  Status status ;
-  SignUpInitial({ this.status= Status.initial});
-  SignUpInitial copyWith(Status? status) {
-    print('State Changed: ${status?? this.status}');
-    return SignUpInitial(status: status ?? this.status);
-  }
+class SignupGender extends SignUpState {
+  final String gender;
+  const SignupGender({ required this.gender});
   @override
-  List<Object> get props => [];
+  List<Object?> get props => [gender];
 }
+
+class SignupCheck extends SignUpState{
+  final bool check;
+  const SignupCheck({required this.check});
+  @override
+  List<Object?> get props =>[check];
+}
+
+

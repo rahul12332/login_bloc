@@ -126,6 +126,15 @@ class _LoginScreenState extends State<LoginScreen> {
                               }, child: Text("SignUp"))
                             ],
                           )
+                        ),
+                        Padding(padding: EdgeInsets.symmetric(horizontal: 40, vertical: 20),
+                        child: TextButton(
+                            onPressed: (){
+                              Navigator.push(context, MaterialPageRoute(builder: (context)=> SignUpScreen()));
+
+                            },
+                          child: Text("SignUp"),
+                        ),
                         )
                       ],
                     )),

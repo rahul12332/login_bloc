@@ -15,3 +15,16 @@ class SignEvent extends SignUpEvent{
   List<Object?> get props => [email, password, name, confirmpassword];
 
 }
+class SignGenderEvent extends SignUpEvent{
+String gender;
+SignGenderEvent({required this.gender});
+  @override
+  // TODO: implement props
+  List<Object?> get props => [gender];
+}
+
+class SignCheckEvent extends SignUpEvent{
+  bool check;
+  SignCheckEvent({required this.check});
+  List<Object?> get props => [check];
+}
